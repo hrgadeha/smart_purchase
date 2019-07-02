@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include smart_purchase *.css
+recursive-include smart_purchase *.csv
+recursive-include smart_purchase *.html
+recursive-include smart_purchase *.ico
+recursive-include smart_purchase *.js
+recursive-include smart_purchase *.json
+recursive-include smart_purchase *.md
+recursive-include smart_purchase *.png
+recursive-include smart_purchase *.py
+recursive-include smart_purchase *.svg
+recursive-include smart_purchase *.txt
+recursive-exclude smart_purchase *.pyc

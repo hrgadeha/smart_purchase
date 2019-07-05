@@ -3,6 +3,35 @@
 
 frappe.ui.form.on('Purchase Dashboard', {
 	refresh: function(frm) {
+		var help_content =
+			`<br><br>
+			<table class="table table-bordered" style="background-color: #f9f9f9;">
+				<tr><td>
+					<h4>
+						<i class="fa fa-hand-right"></i> 
+						${__("Notes")}:
+					</h4>
+					<ul>
+						<li>
+							${__("Supplier should be entered in supplier table under item group")}
+						</li>
+						<li>
+							${__("Item Should have saftey stock value and only thoes item will shown here which has actual qty < saftey stock")}
+						</li>
+						<li>
+							${__("You have to check *Send RFQ* check box in supplier table to create RFQ for this supplier")}
+						</li>
+						<li>
+							${__("You have to entre RFQ Qty and use check box *ADD* to create RFQ for selected items")}
+						</li>
+						<li>
+							${__("On Save, 1 RFQ will be crated based on selected supplier and items")}
+						</li>
+					</ul>
+				</td></tr>
+			</table>`;
+
+		set_field_options("details", help_content);
 
 	}
 });

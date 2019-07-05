@@ -35,7 +35,7 @@ class PurchaseDashboard(Document):
 
 @frappe.whitelist(allow_guest=True)
 def insert_supplier(doctype,item_group=None ):
-	query="select obj2.supplier from `tabItem` obj1, `tabItem Supplier` obj2 where obj1.name = obj2.parent and obj1.item_group ='"+str(item_group)+"';"
+	query="select obj2.supplier from `tabItem Group` obj1, `tabSmart Purchase Supplier` obj2 where obj1.name = obj2.parent and obj1.name ='"+str(item_group)+"';"
 	li=[]
 	dic=frappe.db.sql(query, as_dict=True)
 	for i in dic:	
